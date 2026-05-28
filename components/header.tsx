@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { MobileMenu } from "./mobileMenu";
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
 
 const NAV_ITEMS = [
   { name: "Sobre", href: "#about" },
@@ -12,6 +11,28 @@ const NAV_ITEMS = [
   { name: "Habilidades", href: "#skills" },
   { name: "Contato", href: "#contact" },
 ];
+
+function HamburgerIcon({ isOpen }: { isOpen: boolean }) {
+  return (
+    <div className="w-6 h-5 relative flex flex-col justify-between">
+      <span
+        className={`block h-0.5 w-full bg-foreground rounded-full transition-all duration-300 ease-out origin-center ${
+          isOpen ? "rotate-45 translate-y-2.25" : ""
+        }`}
+      />
+      <span
+        className={`block h-0.5 w-full bg-foreground rounded-full transition-all duration-300 ease-out ${
+          isOpen ? "opacity-0 scale-x-0" : ""
+        }`}
+      />
+      <span
+        className={`block h-0.5 w-full bg-foreground rounded-full transition-all duration-300 ease-out origin-center ${
+          isOpen ? "-rotate-45 -translate-y-2.25" : ""
+        }`}
+      />
+    </div>
+  );
+}
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -31,6 +52,17 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <header
       className={`
@@ -38,7 +70,7 @@ export function Header() {
         transition-all duration-300
         motion-reduce:transition-none
         ${
-          isScrolled
+          isScrolled || isMobileMenuOpen
             ? "bg-background/80 backdrop-blur-md border-b border-border"
             : "bg-transparent"
         }
@@ -65,8 +97,18 @@ export function Header() {
         </Link>
 
         <ul className="hidden md:flex items-center gap-8">
-          {NAV_ITEMS.map((item) => (
-            <li key={item.name}>
+          {NAV_ITEMS.map((item, index) => (
+            <li
+              key={item.name}
+              className={`transform transition-all duration-300 ease-out ${
+                isMobileMenuOpen
+                  ? "translate-x-0 opacity-100"
+                  : "-translate-x-4 opacity-0"
+              }`}
+              style={{
+                transitionDelay: isMobileMenuOpen ? `${index * 50}ms` : "0ms",
+              }}
+            >
               <Link
                 href={item.href}
                 aria-label={`Ir para seção ${item.name}`}
@@ -102,17 +144,14 @@ export function Header() {
           className="md:hidden text-foreground"
           onClick={() => setIsMobileMenuOpen((prev) => !prev)}
         >
-          {isMobileMenuOpen ? (
-            <X className="w-6 h-6" />
-          ) : (
-            <Menu className="w-6 h-6" />
-          )}
+          <HamburgerIcon isOpen={isMobileMenuOpen} />
         </button>
       </nav>
 
       {isMobileMenuOpen && (
         <MobileMenu
           navItems={NAV_ITEMS}
+          isMobileMenuOpen={isMobileMenuOpen}
           setIsMobileMenuOpen={setIsMobileMenuOpen}
         />
       )}
