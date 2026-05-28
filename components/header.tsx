@@ -98,17 +98,7 @@ export function Header() {
 
         <ul className="hidden md:flex items-center gap-8">
           {NAV_ITEMS.map((item, index) => (
-            <li
-              key={item.name}
-              className={`transform transition-all duration-300 ease-out ${
-                isMobileMenuOpen
-                  ? "translate-x-0 opacity-100"
-                  : "-translate-x-4 opacity-0"
-              }`}
-              style={{
-                transitionDelay: isMobileMenuOpen ? `${index * 50}ms` : "0ms",
-              }}
-            >
+            <li key={index}>
               <Link
                 href={item.href}
                 aria-label={`Ir para seção ${item.name}`}

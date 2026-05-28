@@ -14,21 +14,21 @@ export function MobileMenu({
 }: MobileMenuProps) {
   return (
     <div
-      className={`md:hidden fixed inset-0 top-16.25 bg-background/95 backdrop-blur-md transition-all duration-300 ease-out ${
+      className={`md:hidden fixed inset-0 z-50 top-16.25 h-fit bg-background/95 backdrop-blur-md transition-all duration-300 ease-out ${
         isMobileMenuOpen
           ? "opacity-100 visible"
           : "opacity-0 invisible pointer-events-none"
       }`}
     >
-      <div className="container mx-auto px-6 py-8 h-fit flex flex-col">
+      <div className="container mx-auto px-6 py-8 flex flex-col">
         <ul className="flex flex-col gap-2">
           {navItems.map((item, index) => (
             <li
-              key={item.name}
+              key={index}
               className={`transform transition-all duration-300 ease-out ${
                 isMobileMenuOpen
                   ? "translate-x-0 opacity-100"
-                  : "-translate-x-4 opacity-0"
+                  : "-translate-x-4 opacity-100"
               }`}
               style={{
                 transitionDelay: isMobileMenuOpen ? `${index * 50}ms` : "0ms",
@@ -37,7 +37,7 @@ export function MobileMenu({
               <Link
                 href={item.href}
                 aria-label={`Ir para seção ${item.name}`}
-                className="text-foreground hover:text-primary transition-colors text-2xl font-medium block py-3 border-b border-border/50"
+                className={`text-foreground hover:text-primary transition-colors text-2xl font-medium block py-3 ${index !== navItems.length - 1 ? "border-b border-border" : ""}`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
