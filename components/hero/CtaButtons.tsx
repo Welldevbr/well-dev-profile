@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function CTAButtons() {
   const baseStyles =
-    "inline-flex h-14 items-center justify-center rounded-md px-8 font-medium transition-all";
+    "inline-flex h-14 items-center justify-center rounded-xl px-8 font-medium transition-all";
 
   return (
     <div className="mb-12 flex flex-wrap items-center gap-4">
@@ -11,7 +11,7 @@ export function CTAButtons() {
         className={`
           ${baseStyles}
           bg-primary text-primary-foreground
-          hover:bg-primary/90
+          hover:bg-primary/75
           focus-visible:outline-none
           focus-visible:ring-2
           focus-visible:ring-primary
