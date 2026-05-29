@@ -115,8 +115,8 @@ export function Header() {
               rel="noopener noreferrer"
               aria-label="Abrir currículo em PDF"
               className="
-                rounded-md border border-primary
-                px-4 py-2 text-sm font-medium
+                flex items-center justify-center rounded-xl border border-primary
+                h-10 px-6 text-sm font-medium
                 text-primary transition-all
                 hover:bg-primary hover:text-primary-foreground
               "

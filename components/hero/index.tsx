@@ -30,24 +30,12 @@ export function Hero() {
 
           <h2
             className="
-              mb-6 text-3xl font-bold text-muted-foreground
+              mb-14 text-3xl font-bold text-muted-foreground
               md:text-5xl lg:text-6xl
             "
           >
             Construo experiências digitais.
           </h2>
-
-          <p
-            className="
-              mb-8 max-w-2xl text-lg leading-relaxed text-muted-foreground
-            "
-          >
-            Sou desenvolvedor <span className="text-primary">Front-end</span>{" "}
-            com experiência na criação de interfaces modernas, responsivas e de
-            alta performance. Especializado em React e Next.js, desenvolvo
-            aplicações com foco em experiência do usuário, acessibilidade e
-            código escalável.
-          </p>
 
           <CTAButtons />
           <SocialLinks />
