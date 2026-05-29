@@ -14,13 +14,13 @@ export function MobileMenu({
 }: MobileMenuProps) {
   return (
     <div
-      className={`md:hidden fixed inset-0 z-50 top-16.25 h-fit bg-background/95 backdrop-blur-md transition-all duration-300 ease-out ${
+      className={`md:hidden fixed inset-0 z-50 top-14 min-h-screen bg-background/95 backdrop-blur-md border-t border-border transition-all duration-300 ease-out ${
         isMobileMenuOpen
           ? "opacity-100 visible"
           : "opacity-0 invisible pointer-events-none"
       }`}
     >
-      <div className="container mx-auto px-6 py-8 flex flex-col">
+      <div className="container mx-auto h-full px-6 py-8 flex flex-col">
         <ul className="flex flex-col gap-2">
           {navItems.map((item, index) => (
             <li

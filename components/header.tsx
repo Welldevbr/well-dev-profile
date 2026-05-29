@@ -93,7 +93,7 @@ export function Header() {
             rounded-sm
           "
         >
-          {"<WELL-DEV/>"}
+          {"<WELL-DEV />"}
         </Link>
 
         <ul className="hidden md:flex items-center gap-8">
