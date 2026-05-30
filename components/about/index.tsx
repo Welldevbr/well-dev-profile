@@ -37,7 +37,7 @@ export function About() {
     <section id="about" className="relative py-24">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
-          <HeadingSection order="02" title="Sobre mim" />
+          <HeadingSection order="01" title="Sobre mim" />
 
           <div ref={sectionRef} className="grid gap-8 mb-12 md:grid-cols-3">
             <div className="space-y-4 md:col-span-2">
