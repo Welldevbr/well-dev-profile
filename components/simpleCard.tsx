@@ -74,10 +74,12 @@ export function SimpleCard({ variant, item }: SimpleCardProps) {
       </p>
       {!!item.technologies?.length && (
         <ul className="flex flex-wrap gap-2 text-xs font-mono text-muted-foreground/75 mt-6">
-          {item.technologies.map((tech, index) => (
-            <li key={tech}>
+          {item.technologies.map((tech) => (
+            <li
+              key={tech}
+              className="bg-background text-muted-foreground/75 border border-border px-3 py-1 rounded-xl"
+            >
               {tech}
-              {index !== item.technologies!.length - 1 && <span> •</span>}
             </li>
           ))}
         </ul>
