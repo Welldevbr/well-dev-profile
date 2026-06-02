@@ -1,5 +1,5 @@
-import { experiences } from "./experiences";
-import { TechnologyBadge } from "./technologyBadge";
+import { experiences } from "../experiences";
+import { TechnologyBadge } from "./TechnologyBadge";
 
 type ExperienceItem = (typeof experiences)[number];
 

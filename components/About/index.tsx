@@ -3,10 +3,10 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-import { HeadingSection } from "../headingSection";
-import { TextHighlight } from "./textHighlight";
-import { HighlightList } from "./highlightList";
-import { ContainerWrapper } from "../containerWrapper";
+import { HeadingSection } from "../HeadingSection";
+import { ContainerWrapper } from "../ContainerWrapper";
+import { TextHighlight } from "./components/TextHighlight";
+import { HighlightList } from "./components/HighlightList";
 
 const transitionClass = "transition-all duration-300 ease-in-out";
 

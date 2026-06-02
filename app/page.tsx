@@ -2,9 +2,10 @@ import {
   Header,
   Hero,
   About,
-  Footer,
   Experience,
   Skills,
+  Contact,
+  Footer,
 } from "@/components/index";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <About />
         <Experience />
         <Skills />
+        <Contact />
       </main>
       <Footer />
     </>

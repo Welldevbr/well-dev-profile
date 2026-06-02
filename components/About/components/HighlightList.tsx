@@ -1,5 +1,5 @@
 import { Code2, Palette, Zap } from "lucide-react";
-import { SimpleCard } from "../simpleCard";
+import { SimpleCard } from "@/components/SimpleCard";
 
 const highlights = [
   {

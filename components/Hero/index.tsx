@@ -1,7 +1,8 @@
 import { ArrowDown } from "lucide-react";
-import { HeroBackground } from "./HeroBackground";
-import { CTAButtons } from "./CtaButtons";
-import { SocialLinks } from "./SocialLinks";
+
+import { HeroBackground } from "./components/HeroBackground";
+import { CTAButtons } from "./components/CtaButtons";
+import { SocialLinks } from "./components/SocialLinks";
 
 export function Hero() {
   return (

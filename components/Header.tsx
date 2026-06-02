@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { MobileMenu } from "./mobileMenu";
+import { MobileMenu } from "./MobileMenu";
 import { useEffect, useState } from "react";
 
 const NAV_ITEMS = [
@@ -81,7 +81,7 @@ export function Header() {
         className="container mx-auto px-6 py-4 flex items-center justify-between"
       >
         <Link
-          href="/"
+          href="#home"
           aria-label="Página inicial"
           className="
             text-xl font-bold text-foreground

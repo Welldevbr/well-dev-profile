@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Nova mensagem de contato</title>
+    <style>
+      body,
+      table,
+      td {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #0e1017 !important;
+        -webkit-text-size-adjust: 100%;
+      }
+      /* Force dark bg on Gmail/Outlook webmail */
+      u + #body-table {
+        background-color: #0e1017 !important;
+      }
+      #outlook a {
+        padding: 0;
+      }
+      @media only screen and (max-width: 600px) {
+        .wrapper {
+          padding: 20px 12px !important;
+        }
+        .card {
+          padding: 24px 20px !important;
+        }
+        .btn {
+          display: block !important;
+          text-align: center !important;
+        }
+        .meta-row td {
+          display: block !important;
+          text-align: left !important;
+          padding-bottom: 14px !important;
+        }
+      }
+    </style>
+  </head>
+  <!--[if mso]><body style="background-color:#0e1017;"><![endif]-->
+  <body
+    id="body-table"
+    style="
+      margin: 0;
+      padding: 0;
+      background-color: #0e1017;
+      width: 100% !important;
+    "
+  >
+    <!-- Preheader oculto -->
+    <span style="display: none; max-height: 0; overflow: hidden; mso-hide: all"
+      >Nova mensagem de {{name}}: {{subject}}</span
+    >
+
+    <!-- Wrapper -->
+    <table
+      role="presentation"
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      bgcolor="#0e1017"
+      style="background-color: #0e1017"
+    >
+      <tr>
+        <td class="wrapper" align="center" style="padding: 40px 16px">
+          <!-- Container 560px -->
+          <table
+            role="presentation"
+            width="560"
+            cellpadding="0"
+            cellspacing="0"
+            border="0"
+            style="max-width: 560px; width: 100%"
+          >
+            <!-- ── ACCENT BAR TOP ─────────────────── -->
+            <tr>
+              <td
+                style="
+                  background: linear-gradient(90deg, #2e8fa0, #4ecdc4, #7dd8d0);
+                  height: 3px;
+                  border-radius: 8px 8px 0 0;
+                  font-size: 0;
+                  line-height: 0;
+                "
+              >
+                &nbsp;
+              </td>
+            </tr>
+
+            <!-- ── CARD ───────────────────────────── -->
+            <tr>
+              <td
+                class="card"
+                style="
+                  background-color: #191b23;
+                  border: 1px solid #363a4a;
+                  border-top: none;
+                  border-radius: 0 0 8px 8px;
+                  padding: 32px 36px;
+                "
+              >
+                <!-- Header row -->
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  style="margin-bottom: 28px"
+                >
+                  <tr>
+                    <td style="vertical-align: middle">
+                      <p
+                        style="
+                          margin: 0 0 2px;
+                          font-size: 11px;
+                          font-weight: 600;
+                          letter-spacing: 2.5px;
+                          text-transform: uppercase;
+                          color: #4ecdc4;
+                          font-family:
+                            &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif;
+                        "
+                      >
+                        Formulário de contato
+                      </p>
+                      <p
+                        style="
+                          margin: 0;
+                          font-size: 20px;
+                          font-weight: 600;
+                          color: #fafafa;
+                          font-family:
+                            &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif;
+                        "
+                      >
+                        Nova mensagem
+                      </p>
+                    </td>
+                    <td align="right" style="vertical-align: middle">
+                      <span
+                        style="
+                          display: inline-block;
+                          background-color: #1a3a3a;
+                          border: 1px solid #2e6060;
+                          border-radius: 20px;
+                          padding: 5px 14px;
+                          font-size: 10px;
+                          font-weight: 700;
+                          letter-spacing: 1.5px;
+                          color: #4ecdc4;
+                          font-family:
+                            &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif;
+                        "
+                      >
+                        NOVO
+                      </span>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Divider -->
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  style="margin-bottom: 24px"
+                >
+                  <tr>
+                    <td
+                      style="
+                        height: 1px;
+                        background-color: #363a4a;
+                        font-size: 0;
+                        line-height: 0;
+                      "
+                    >
+                      &nbsp;
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Sender block -->
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  style="margin-bottom: 24px"
+                >
+                  <tr>
+                    <!-- Avatar -->
+                    <td style="width: 44px; vertical-align: middle">
+                      <div
+                        style="
+                          width: 44px;
+                          height: 44px;
+                          background: linear-gradient(135deg, #2e8fa0, #4ecdc4);
+                          border-radius: 50%;
+                          text-align: center;
+                          line-height: 44px;
+                        "
+                      >
+                        <span
+                          style="
+                            font-size: 18px;
+                            font-weight: 700;
+                            color: #0e1017;
+                            font-family:
+                              &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif;
+                            line-height: 44px;
+                            display: block;
+                          "
+                        >
+                          {{initial}}
+                        </span>
+                      </div>
+                    </td>
+                    <td style="padding-left: 14px; vertical-align: middle">
+                      <p
+                        style="
+                          margin: 0 0 3px;
+                          font-size: 15px;
+                          font-weight: 600;
+                          color: #fafafa;
+                          font-family:
+                            &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif;
+                        "
+                      >
+                        {{name}}
+                      </p>
+                      <a
+                        href="mailto:{{email}}"
+                        style="
+                          font-size: 13px;
+                          color: #4ecdc4;
+                          text-decoration: none;
+                          font-family:
+                            &quot;Courier New&quot;, Courier, monospace;
+                        "
+                      >
+                        {{email}}
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Assunto -->
+                <p
+                  style="
+                    margin: 0 0 6px;
+                    font-size: 10px;
+                    font-weight: 600;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    color: #4ecdc4;
+                    font-family:
+                      &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif;
+                  "
+                >
+                  Assunto
+                </p>
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  style="margin-bottom: 20px"
+                >
+                  <tr>
+                    <td
+                      style="
+                        background-color: #20222e;
+                        border: 1px solid #363a4a;
+                        border-left: 3px solid #4ecdc4;
+                        border-radius: 0 6px 6px 0;
+                        padding: 12px 16px;
+                      "
+                    >
+                      <span
+                        style="
+                          font-size: 15px;
+                          font-weight: 500;
+                          color: #fafafa;
+                          font-family:
+                            &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif;
+                        "
+                      >
+                        {{subject}}
+                      </span>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Mensagem -->
+                <p
+                  style="
+                    margin: 0 0 6px;
+                    font-size: 10px;
+                    font-weight: 600;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    color: #4ecdc4;
+                    font-family:
+                      &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif;
+                  "
+                >
+                  Mensagem
+                </p>
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  style="margin-bottom: 28px"
+                >
+                  <tr>
+                    <td
+                      style="
+                        background-color: #20222e;
+                        border: 1px solid #363a4a;
+                        border-radius: 6px;
+                        padding: 18px 16px;
+                      "
+                    >
+                      <p
+                        style="
+                          margin: 0;
+                          font-size: 14px;
+                          color: #c8ccd8;
+                          line-height: 1.8;
+                          font-family:
+                            &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif;
+                        "
+                      >
+                        {{message}}
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Divider -->
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  style="margin-bottom: 20px"
+                >
+                  <tr>
+                    <td
+                      style="
+                        height: 1px;
+                        background-color: #363a4a;
+                        font-size: 0;
+                        line-height: 0;
+                      "
+                    >
+                      &nbsp;
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Meta + CTA -->
+                <table
+                  role="presentation"
+                  class="meta-row"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                >
+                  <tr>
+                    <td style="vertical-align: middle">
+                      <p
+                        style="
+                          margin: 0;
+                          font-size: 12px;
+                          color: #8b8fa8;
+                          font-family:
+                            &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif;
+                        "
+                      >
+                        {{date}} · {{time}}<br />
+                        <span
+                          style="
+                            color: #4a4e60 !important;
+                            text-decoration: none !important;
+                          "
+                          >via well-dev-profile.vercel.app</span
+                        >
+                      </p>
+                    </td>
+                    <td align="right" style="vertical-align: middle">
+                      <table
+                        role="presentation"
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                      >
+                        <tr>
+                          <td
+                            style="
+                              background-color: #4ecdc4;
+                              border-radius: 6px;
+                              mso-padding-alt: 0;
+                            "
+                          >
+                            <a
+                              class="btn"
+                              href="mailto:{{email}}?subject=Re: {{subject}}"
+                              style="
+                                display: inline-block;
+                                padding: 11px 22px;
+                                font-size: 13px;
+                                font-weight: 600;
+                                color: #0e1017;
+                                text-decoration: none;
+                                font-family:
+                                  &quot;Segoe UI&quot;, Helvetica, Arial,
+                                  sans-serif;
+                                white-space: nowrap;
+                              "
+                            >
+                              Responder
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- ── FOOTER TEXT ─────────────────────── -->
+            <tr>
+              <td style="padding-top: 20px; text-align: center">
+                <p
+                  style="
+                    margin: 0;
+                    font-size: 11px;
+                    color: #4a4e60;
+                    font-family:
+                      &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif;
+                    line-height: 1.6;
+                  "
+                >
+                  Gerado automaticamente pelo formulário do seu site.<br />
+                  Use o botão acima para responder ao remetente.
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

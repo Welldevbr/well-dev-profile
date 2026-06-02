@@ -14,8 +14,6 @@ const technologies = [
   "Git & GitHub",
   "Jest / Vitest",
   "Figma",
-  "SFCC (Salesforce Commerce Cloud)",
-  "JQuery",
 ];
 
 export function TechnologiesList() {

@@ -1,6 +1,7 @@
-import { ContainerWrapper } from "../containerWrapper";
-import { HeadingSection } from "../headingSection";
-import { ExperienceCard } from "./ExperienceCard";
+import { ContainerWrapper } from "../ContainerWrapper";
+import { HeadingSection } from "../HeadingSection";
+
+import { ExperienceCard } from "./components/ExperienceCard";
 import { experiences } from "./experiences";
 
 export function Experience() {
