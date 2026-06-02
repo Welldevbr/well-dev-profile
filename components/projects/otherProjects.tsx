@@ -1,4 +1,4 @@
-import { SimpleCard } from "../simpleCard";
+import { SimpleCard } from "../SimpleCard";
 
 const otherProjects = [
   {
