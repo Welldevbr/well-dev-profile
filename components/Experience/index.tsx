@@ -11,7 +11,7 @@ export function Experience() {
       aria-labelledby="experience-heading"
       isCard
     >
-      <HeadingSection order="02" title="Experiência" />
+      <HeadingSection sectionId="experience" order="02" title="Experiência" />
 
       <ul className="space-y-6">
         {experiences.map((experience) => (

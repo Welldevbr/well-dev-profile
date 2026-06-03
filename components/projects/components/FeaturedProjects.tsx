@@ -3,11 +3,11 @@ import { ExternalLink } from "lucide-react";
 import { RiGithubLine } from "react-icons/ri";
 import { ProjectImage } from "./ProjectImage";
 import { FeaturedProjectProps } from "../types";
+import { Badge } from "@/components/ui/badge";
 
-export function FeaturedProjects({
-  project,
-  project: { index },
-}: FeaturedProjectProps) {
+export function FeaturedProjects({ project }: FeaturedProjectProps) {
+  const index = project.index || 0;
+
   return (
     <div key={project.title} className="group relative">
       <div
@@ -27,17 +27,13 @@ export function FeaturedProjects({
               {project.description}
             </p>
 
-            {/* Technologies */}
             <div
               className={`flex flex-wrap gap-2 ${index % 2 === 1 ? "lg:justify-end" : ""}`}
             >
               {project.technologies.map((tech) => (
-                <span
-                  key={tech}
-                  className="px-3 py-1 text-xs font-mono bg-secondary/50 text-muted-foreground rounded-full border border-border hover:border-primary/50 hover:text-primary transition-colors"
-                >
+                <Badge key={tech} variant="secondary">
                   {tech}
-                </span>
+                </Badge>
               ))}
             </div>
 

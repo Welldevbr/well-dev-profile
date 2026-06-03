@@ -1,5 +1,5 @@
+import { Badge } from "@/components/ui/badge";
 import { experiences } from "../experiences";
-import { TechnologyBadge } from "./TechnologyBadge";
 
 type ExperienceItem = (typeof experiences)[number];
 
@@ -54,7 +54,9 @@ export function ExperienceCard({ experience }: { experience: ExperienceItem }) {
           aria-label="Tecnologias utilizadas"
         >
           {technologies.map((technology) => (
-            <TechnologyBadge key={technology} technology={technology} />
+            <Badge key={technology} variant="technology">
+              {technology}
+            </Badge>
           ))}
         </ul>
       </div>

@@ -9,7 +9,7 @@ interface ExperienceItem {
 
 export const experiences: Array<ExperienceItem> = [
   {
-    period: "2026 — Presente",
+    period: "2026",
     role: "Desenvolvedor Front-end Júnior (SFCC)",
     company: "Backlgrs",
     companyUrl: "https://backlgrs.com.br/",
@@ -21,6 +21,7 @@ export const experiences: Array<ExperienceItem> = [
       "ISML",
       "Sass",
       "Node.js",
+      "Webpack",
       "Git",
       "SFRA",
     ],
@@ -40,6 +41,7 @@ export const experiences: Array<ExperienceItem> = [
       "Styled Components",
       "Zustand",
       "TanStack Query",
+      "React-router",
       "REST API",
     ],
   },

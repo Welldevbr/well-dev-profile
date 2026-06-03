@@ -7,7 +7,7 @@ import { TechnologiesList } from "./components/TechnologiesList";
 export function Skills() {
   return (
     <ContainerWrapper id="skills" isCard>
-      <HeadingSection order="03" title="Habilidades" />
+      <HeadingSection sectionId="skills" order="04" title="Habilidades" />
 
       <div className="grid md:grid-cols-3 gap-8 mb-16">
         {skillCategories.map((category) => (

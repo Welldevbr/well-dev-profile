@@ -1,3 +1,8 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import { Progress } from "@/components/animate-ui/components/radix/progress";
+
 interface Skill {
   name: string;
   level: number;
@@ -11,26 +16,48 @@ interface SkillCaterogyProps {
 function SkillItem({ name, level }: Skill) {
   const safeLevel = Math.max(0, Math.min(100, level));
 
+  const [progress, setProgress] = useState(0);
+  const itemRef = useRef<HTMLLIElement>(null);
+
+  useEffect(() => {
+    const element = itemRef.current;
+
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setProgress(safeLevel);
+        } else {
+          setProgress(0);
+        }
+      },
+      {
+        threshold: 0.4,
+      },
+    );
+
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, [safeLevel]);
+
   return (
-    <li className="space-y-1">
+    <li ref={itemRef} className="space-y-1">
       <div className="flex justify-between text-sm">
         <span className="text-muted-foreground">{name}</span>
-        <span className="text-primary font-mono">{safeLevel}%</span>
+        <span className="font-mono text-primary">{safeLevel}%</span>
       </div>
 
-      <div
+      <Progress
+        value={progress}
+        className="w-full transition-all duration-1000"
         role="progressbar"
-        aria-label={`${name}: ${safeLevel}%`}
-        aria-valuenow={safeLevel}
         aria-valuemin={0}
         aria-valuemax={100}
-        className="h-2 bg-secondary rounded-full overflow-hidden"
-      >
-        <div
-          className="h-full bg-primary rounded-full transition-all duration-1000"
-          style={{ width: `${safeLevel}%` }}
-        />
-      </div>
+        aria-valuenow={progress}
+        aria-label={`${name}: ${safeLevel}%`}
+      />
     </li>
   );
 }
