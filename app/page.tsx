@@ -3,6 +3,7 @@ import {
   Hero,
   About,
   Experience,
+  Projects,
   Skills,
   Contact,
   Footer,
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <About />
         <Experience />
+        <Projects />
         <Skills />
         <Contact />
       </main>
