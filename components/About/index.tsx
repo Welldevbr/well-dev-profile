@@ -7,7 +7,6 @@ import { HeadingSection } from "../HeadingSection";
 import { ContainerWrapper } from "../ContainerWrapper";
 import { TextHighlight } from "./components/TextHighlight";
 import { HighlightList } from "./components/HighlightList";
-import { AnimateFrame } from "../AnimateFrame";
 
 const transitionClass = "transition-all duration-300 ease-in-out";
 
@@ -103,7 +102,7 @@ export function About() {
             height={400}
             priority
             className={`
-                  relative z-10 h-full w-full object-cover
+                  relative z-10 h-auto w-full object-cover
                   grayscale
                   ${transitionClass}
                   ${isActive ? "grayscale-0" : ""}

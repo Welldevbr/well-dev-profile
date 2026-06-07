@@ -37,7 +37,7 @@ export function ProjectImage({ project }: { project: ProjectProps }) {
                 alt={project.title}
                 width={516}
                 height={322}
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-cover"
               />
             </div>
           ) : (
