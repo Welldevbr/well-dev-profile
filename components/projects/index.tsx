@@ -27,7 +27,7 @@ export async function Projects() {
 
   return (
     <ContainerWrapper id="projects">
-      <HeadingSection sectionId="projects" order="03" title="Projetos" />
+      <HeadingSection order="03" title="Projetos" />
 
       <div className="space-y-16 mb-24">
         {repoToDisplay.map((project, index) => (

@@ -6,11 +6,7 @@ import { ContactInfo } from "./components/ContactInfo";
 export function Contact() {
   return (
     <ContainerWrapper id="contact">
-      <HeadingSection
-        sectionId="contact"
-        order={"05"}
-        title={" O que vem a seguir?"}
-      />
+      <HeadingSection order={"05"} title={" O que vem a seguir?"} />
 
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">

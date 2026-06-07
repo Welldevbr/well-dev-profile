@@ -1,6 +1,5 @@
 import { Code2, Palette, Zap } from "lucide-react";
 import { SimpleCard } from "@/components/SimpleCard";
-import { AnimateFrame } from "@/components/AnimateFrame";
 
 const highlights = [
   {
@@ -26,15 +25,8 @@ const highlights = [
 export function HighlightList() {
   return (
     <div className="grid md:grid-cols-3 gap-6">
-      {highlights.map((item, index) => (
-        <AnimateFrame
-          key={item.title}
-          sectionId="about"
-          position="bottom"
-          duration={`0.${3 + index}`}
-        >
-          <SimpleCard key={item.title} item={item} />
-        </AnimateFrame>
+      {highlights.map((item) => (
+        <SimpleCard key={item.title} item={item} />
       ))}
     </div>
   );
