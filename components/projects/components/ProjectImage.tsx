@@ -39,16 +39,15 @@ export function ProjectImage({ project }: { project: ProjectProps }) {
                 alt={project.title}
                 width={516}
                 height={322}
-                className="w-full h-auto object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
           ) : (
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="relative">
-                <span className="text-7xl font-bold font-mono text-primary/10 group-hover:text-primary/20 transition-colors duration-500">
-                  {project.title.slice(0, 3).toUpperCase()}
+                <span className="text-5xl font-bold font-mono text-primary/75 group-hover:text-primary transition-colors duration-500">
+                  {"</>"}
                 </span>
-                <div className="absolute inset-0 blur-2xl bg-primary/5 group-hover:bg-primary/10 transition-colors duration-500" />
               </div>
             </div>
           )}

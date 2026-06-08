@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { ExternalLink, Folder, LucideProps } from "lucide-react";
 import Link from "next/link";
 import { RiGithubLine } from "react-icons/ri";
+import { Badge } from "./ui/badge";
 
 interface ItemProps {
   icon?: ElementType<LucideProps>;
@@ -23,7 +24,7 @@ export function SimpleCard({ variant, item }: SimpleCardProps) {
     <Card
       className={`
         ${variant === "primary" ? "hover:-translate-y-1" : ""}
-        mx-auto w-full max-w-sm px-6 gap-2 group
+        mx-auto w-full max-w-sm px-4 gap-2 group
         border border-border hover:border-primary/50 
         transition-all duration-300 ease-in-out
       `}
@@ -75,15 +76,22 @@ export function SimpleCard({ variant, item }: SimpleCardProps) {
         {item.description}
       </p>
       {!!item.technologies?.length && (
-        <ul className="flex flex-wrap gap-2 text-xs font-mono text-muted-foreground/75 mt-6">
-          {item.technologies.map((tech) => (
-            <li
+        <ul className="flex flex-wrap items-center gap-2 text-xs font-mono text-muted-foreground/75 mt-6">
+          {item.technologies.slice(0, 4).map((tech) => (
+            <Badge
               key={tech}
-              className="bg-background text-muted-foreground/75 border border-border px-3 py-1 rounded-xl"
+              variant="secondary"
+              className="bg-background text-muted-foreground/75 hover:border-border hover:text-muted-foreground/75 px-3 py-1"
             >
               {tech}
-            </li>
+            </Badge>
           ))}
+          {item.technologies.slice(4).length && (
+            <Badge
+              variant="secondary"
+              className="px-2 text-xs font-mono hover:border-border hover:text-muted-foreground"
+            >{`+${item.technologies.slice(4).length}`}</Badge>
+          )}
         </ul>
       )}
     </Card>
