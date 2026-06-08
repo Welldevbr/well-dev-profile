@@ -3,6 +3,7 @@ import { ArrowDown } from "lucide-react";
 import { HeroBackground } from "./components/HeroBackground";
 import { CTAButtons } from "./components/CtaButtons";
 import { SocialLinks } from "./components/SocialLinks";
+import { Typewriter } from "./components/Typewriter";
 
 export function Hero() {
   const sectionId = "home";
@@ -18,27 +19,26 @@ export function Hero() {
       <HeroBackground />
 
       <div className="container relative z-10 mx-auto px-6">
-        <div className="mx-auto max-w-4xl">
-          <p className="mb-4 font-mono text-sm text-primary">Olá, me chamo</p>
+        <div className="mx-auto max-w-2xl">
+          <p className="text-primary font-mono mb-4">
+            Olá, eu sou <Typewriter />
+          </p>
 
-          <h1
-            id="hero-title"
-            className="
-              mb-4 text-4xl font-bold text-foreground
-              md:text-6xl lg:text-7xl
-            "
-          >
-            Wellington Santana.
+          <h1 className="text-4xl md:text-7xl font-bold tracking-tight">
+            Desenvolvedor Front-end React
           </h1>
 
-          <h2
-            className="
-              mb-14 text-3xl font-bold text-muted-foreground
-              md:text-5xl lg:text-6xl
-            "
-          >
+          <h2 className="mt-4 text-2xl md:text-4xl text-muted-foreground font-semibold">
             Construo experiências digitais.
           </h2>
+
+          <p className="mt-10 mb-14 max-w-2xl text-muted-foreground leading-relaxed">
+            Desenvolvedor <span className="text-white">Front-end</span> com mais
+            de <span className="text-white">3 anos de experiência</span> em
+            React, Next.js, TypeScript, TailwindCSS e integração com APIs REST.
+            Atuei em projetos SaaS, dashboards, sistemas internos e e-commerce
+            com foco em performance, acessibilidade e experiência do usuário.
+          </p>
 
           <CTAButtons />
           <SocialLinks />
@@ -47,7 +47,7 @@ export function Hero() {
         <div
           aria-hidden="true"
           className="
-            absolute bottom-6 left-1/2 -translate-x-1/2 motion-safe:animate-bounce
+            absolute bottom-0 left-1/2 -translate-x-1/2 motion-safe:animate-bounce
           "
         >
           <ArrowDown className="h-6 w-6 text-muted-foreground" />
