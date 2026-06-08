@@ -8,7 +8,7 @@ export const featuredProjects = [
     image: process.env.NEXT_PUBLIC_PROJECT_TWO_IMAGE_URL ?? "",
   },
   {
-    name: "blogify",
+    name: "api-node-ts",
     image: "",
   },
 ];

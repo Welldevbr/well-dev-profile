@@ -31,7 +31,7 @@ export function SocialLinks() {
             <li key={name}>
               <Link
                 href={href}
-                target={isExternal ? "_blank" : undefined}
+                target={"_blank"}
                 rel={isExternal ? "noopener noreferrer" : undefined}
                 aria-label={`Acessar ${name}`}
                 className="

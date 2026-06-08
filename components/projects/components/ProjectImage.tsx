@@ -10,9 +10,11 @@ function BrowserMockupHeader({ live }: { live: string }) {
         <span className="w-3 h-3 rounded-full bg-green-500/80" />
       </div>
       <div className="flex-1 col-span-3 flex justify-center">
-        <div className="px-6 py-1 bg-background/50 rounded-md text-xs text-muted-foreground font-mono">
-          {live}
-        </div>
+        {live && (
+          <div className="px-6 py-1 bg-background/50 rounded-md text-xs text-muted-foreground font-mono">
+            {live}
+          </div>
+        )}
       </div>
     </div>
   );
@@ -43,8 +45,8 @@ export function ProjectImage({ project }: { project: ProjectProps }) {
           ) : (
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="relative">
-                <span className="text-7xl font-bold text-primary/10 group-hover:text-primary/20 transition-colors duration-500">
-                  {project.title.slice(0, 2).toUpperCase()}
+                <span className="text-7xl font-bold font-mono text-primary/10 group-hover:text-primary/20 transition-colors duration-500">
+                  {project.title.slice(0, 3).toUpperCase()}
                 </span>
                 <div className="absolute inset-0 blur-2xl bg-primary/5 group-hover:bg-primary/10 transition-colors duration-500" />
               </div>

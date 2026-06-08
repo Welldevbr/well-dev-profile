@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
@@ -57,8 +57,6 @@ const fields: ContactFormField[] = [
 export function ContactForm() {
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const successTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-
   const {
     register,
     reset,
@@ -94,28 +92,18 @@ export function ContactForm() {
 
           setIsSuccess(true);
           reset();
-
-          successTimeoutRef.current = setTimeout(() => {
-            setIsSuccess(false);
-          }, 3000);
         } catch (error) {
           toast.error(
             error instanceof Error
               ? error.message
               : "Ocorreu um erro ao enviar a mensagem.",
           );
+        } finally {
+          setIsSuccess(false);
         }
       })(event),
     [handleSubmit, reset],
   );
-
-  useEffect(() => {
-    return () => {
-      if (successTimeoutRef.current) {
-        clearTimeout(successTimeoutRef.current);
-      }
-    };
-  }, []);
 
   return (
     <div className="md:col-span-3">

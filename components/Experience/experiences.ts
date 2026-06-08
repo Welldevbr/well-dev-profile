@@ -9,7 +9,7 @@ interface ExperienceItem {
 
 export const experiences: Array<ExperienceItem> = [
   {
-    period: "2026",
+    period: "Jan/2026 - Jun/2026",
     role: "Desenvolvedor Front-end Júnior (SFCC)",
     company: "Backlgrs",
     companyUrl: "https://backlgrs.com.br/",
@@ -27,7 +27,7 @@ export const experiences: Array<ExperienceItem> = [
     ],
   },
   {
-    period: "2023 — 2026",
+    period: "Ago/2023 - Jan/2026",
     role: "Desenvolvedor Front-end",
     company: "Agility Soluções",
     companyUrl: "https://www.agility.com.br/",

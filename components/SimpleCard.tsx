@@ -41,6 +41,7 @@ export function SimpleCard({ variant, item }: SimpleCardProps) {
                 href={item.github}
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="GitHub"
+                target="_blank"
               >
                 <RiGithubLine className="w-6 h-6" />
               </Link>
@@ -50,6 +51,7 @@ export function SimpleCard({ variant, item }: SimpleCardProps) {
                 href={item.live}
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Ver projeto"
+                target="_blank"
               >
                 <ExternalLink className="w-6 h-6" />
               </Link>

@@ -37,7 +37,6 @@ export function FeaturedProjects({ project }: FeaturedProjectProps) {
               ))}
             </div>
 
-            {/* Links */}
             <div
               className={`flex gap-4 pt-2 ${index % 2 === 1 ? "lg:justify-end" : ""}`}
             >
@@ -45,18 +44,22 @@ export function FeaturedProjects({ project }: FeaturedProjectProps) {
                 href={project.github}
                 className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Ver código no GitHub"
+                target="_blank"
               >
                 <RiGithubLine className="w-5 h-5" />
                 <span>Código</span>
               </Link>
-              <Link
-                href={project.live!}
-                className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-                aria-label="Ver projeto ao vivo"
-              >
-                <ExternalLink className="w-5 h-5" />
-                <span>Demo</span>
-              </Link>
+              {project.live && (
+                <Link
+                  href={project.live}
+                  className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                  aria-label="Ver projeto ao vivo"
+                  target="_blank"
+                >
+                  <ExternalLink className="w-5 h-5" />
+                  <span>Demo</span>
+                </Link>
+              )}
             </div>
           </div>
         </div>
