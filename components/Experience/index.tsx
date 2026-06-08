@@ -6,11 +6,7 @@ import { experiences } from "./experiences";
 
 export function Experience() {
   return (
-    <ContainerWrapper
-      id="experience"
-      aria-labelledby="experience-heading"
-      isCard
-    >
+    <ContainerWrapper id="experience" aria-labelledby="experience-heading">
       <HeadingSection order="02" title="Experiência" />
 
       <ul className="space-y-6">

@@ -10,7 +10,7 @@ interface ExperienceItem {
 export const experiences: Array<ExperienceItem> = [
   {
     period: "Jan/2026 - Jun/2026",
-    role: "Desenvolvedor Front-end Júnior (SFCC)",
+    role: "Desenvolvedor Front-end SFCC (Salesforce Commerce Cloud)",
     company: "Backlgrs",
     companyUrl: "https://backlgrs.com.br/",
     description:

@@ -34,7 +34,7 @@ export function About() {
   }, []);
 
   return (
-    <ContainerWrapper id="about" className="relative">
+    <ContainerWrapper id="about" className="relative" isCard>
       <HeadingSection order="01" title="Sobre mim" />
 
       <div ref={sectionRef} className="grid gap-8 mb-12 md:grid-cols-3">
