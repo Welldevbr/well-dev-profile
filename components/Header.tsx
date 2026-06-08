@@ -5,8 +5,8 @@ import { MobileMenu } from "./MobileMenu";
 import { useEffect, useState } from "react";
 
 const NAV_ITEMS = [
-  { name: "Sobre", href: "#about" },
   { name: "Experiência", href: "#experience" },
+  { name: "Sobre", href: "#about" },
   { name: "Projetos", href: "#projects" },
   { name: "Habilidades", href: "#skills" },
   { name: "Contato", href: "#contact" },
