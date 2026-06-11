@@ -41,7 +41,7 @@ const CORE_STACK: CoreTech[] = [
 
 export function CoreStack() {
   return (
-    <ul className="grid grid-cols-2 gap-3 sm:grid-cols-4 md:gap-4 mb-12">
+    <ul className="grid md:grid-cols-2 gap-3 sm:grid-cols-4 md:gap-4 mb-12">
       {CORE_STACK.map((tech) => (
         <li
           key={tech.name}

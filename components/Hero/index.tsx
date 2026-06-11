@@ -28,17 +28,9 @@ export function Hero() {
             Desenvolvedor Front-end React
           </h1>
 
-          <h2 className="mt-4 text-2xl md:text-4xl text-muted-foreground font-semibold">
+          <h2 className="mt-4 mb-10 text-2xl md:text-4xl text-muted-foreground font-semibold">
             Construo experiências digitais.
           </h2>
-
-          <p className="mt-10 mb-14 max-w-2xl text-muted-foreground leading-relaxed">
-            Desenvolvedor <span className="text-white">Front-end</span> com mais
-            de <span className="text-white">3 anos de experiência</span> em
-            React, Next.js, TypeScript, TailwindCSS e integração com APIs REST.
-            Atuei em projetos SaaS, dashboards, sistemas internos e e-commerce
-            com foco em performance, acessibilidade e experiência do usuário.
-          </p>
 
           <CTAButtons />
           <SocialLinks />

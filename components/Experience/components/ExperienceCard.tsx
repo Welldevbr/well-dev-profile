@@ -10,7 +10,7 @@ export function ExperienceCard({ experience }: { experience: ExperienceItem }) {
   return (
     <article
       className="
-        group grid gap-4 rounded-xl border border-transparent p-6
+        group grid gap-4 rounded-xl border border-transparent py-6 md:px-6
         transition-all duration-300
         hover:border-border hover:bg-card
         focus-within:border-border focus-within:bg-card

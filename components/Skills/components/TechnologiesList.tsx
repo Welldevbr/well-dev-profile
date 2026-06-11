@@ -45,7 +45,7 @@ export function TechnologiesList() {
         Tecnologias que uso no dia a dia
       </h3>
 
-      <ul className="grid grid-cols-3 gap-6">
+      <ul className="grid md:grid-cols-3 gap-6">
         {technologies.map((tech) => (
           <li key={tech.name} className="space-y-4">
             <h4 className="text-xs font-mono uppercase tracking-wider text-muted-foreground">
