@@ -88,53 +88,16 @@ Acesse `http://localhost:3000` no seu navegador.
 
 ```
 well-dev-profile/
-├── src/
-│   ├── components/     # Componentes React reutilizáveis
-│   ├── pages/         # Páginas Next.js
-│   ├── styles/        # Estilos globais
-│   ├── services/      # Serviços e integrações com APIs
-│   ├── types/         # Tipos TypeScript
-│   └── utils/         # Funções utilitárias
+├── app/         # Páginas Next.js
+├── components/     # Componentes React reutilizáveis
+├── config/        # configurações de metadata
+├── emails/      # Templates de email
+├── lib/         # Funções utilitárias e bibliotecas
 ├── public/            # Arquivos estáticos
 ├── .env.local         # Variáveis de ambiente
 ├── next.config.js     # Configuração do Next.js
 ├── tsconfig.json      # Configuração do TypeScript
 └── package.json       # Dependências do projeto
-```
-
-## 🎯 Recursos Principais
-
-### 1. Galeria de Projetos
-Exibe repositórios GitHub em destaque com:
-- Nome e descrição
-- Linguagens utilizadas
-- Links diretos para o repositório
-- Estatísticas (stars, forks)
-
-### 2. Galeria de Imagens
-Imagens armazenadas no Google Drive:
-- Carregamento dinâmico
-- Otimizado para web
-- Galeria responsiva
-
-### 3. Seção Sobre
-Apresentação pessoal com:
-- Informações profissionais
-- Skills e tecnologias
-- Links para contato
-
-## 🌐 Deploy
-
-Este projeto pode ser facilmente deployado em plataformas como:
-- [Vercel](https://vercel.com) (recomendado para Next.js)
-- [Netlify](https://www.netlify.com)
-- [GitHub Pages](https://pages.github.com)
-
-### Deploy na Vercel
-
-```bash
-npm install -g vercel
-vercel
 ```
 
 ## 📝 Licença
@@ -144,12 +107,6 @@ Este projeto é de código aberto e está disponível sob a licença MIT.
 ## 🤝 Contribuições
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests.
-
-## 📧 Contato
-
-- **GitHub**: [@Welldevbr](https://github.com/Welldevbr)
-- **Email**: Entre em contato através do portfólio
-
 ---
 
-Feito com ❤️ por [Welldevbr](https://github.com/Welldevbr)
+Feito por [Welldevbr](https://github.com/Welldevbr)
