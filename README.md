@@ -107,6 +107,7 @@ Este projeto é de código aberto e está disponível sob a licença MIT.
 ## 🤝 Contribuições
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests.
+
 ---
 
 Feito por [Welldevbr](https://github.com/Welldevbr)
