@@ -1,10 +1,10 @@
 "use client";
 
+import { zodResolver } from "@hookform/resolvers/zod";
+import { CheckCircle, Loader2, Send } from "lucide-react";
 import { useCallback, useState } from "react";
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
-import { CheckCircle, Loader2, Send } from "lucide-react";
 
 import { FormField } from "@/components/FormField";
 import { Button } from "@/components/ui/button";
@@ -111,6 +111,8 @@ export function ContactForm() {
         onSubmit={submitHandler}
         aria-busy={isSubmitting}
         className="space-y-6"
+        autoComplete="off"
+        data-lpignore="true"
       >
         <div className="grid sm:grid-cols-2 gap-4">
           {fields.slice(0, 2).map(({ name, label, ...field }) => (
@@ -129,6 +131,7 @@ export function ContactForm() {
                 disabled={isSubmitting}
                 aria-invalid={!!errors[name as keyof ContactFormData]}
                 {...register(name)}
+                data-lpignore="true"
               />
             </FormField>
           ))}

@@ -1,3 +1,5 @@
+import { Reveal } from "./Reveal";
+
 export function HeadingSection({
   order,
   title,
@@ -6,12 +8,15 @@ export function HeadingSection({
   title: string;
 }) {
   return (
-    <div className="flex items-center gap-4 mb-12">
-      <h2 className="text-2xl md:text-3xl font-bold text-foreground whitespace-nowrap">
-        <span className="text-primary font-mono text-xl">{order}.</span> {title}
-      </h2>
+    <Reveal direction="right" delay={0.1}>
+      <div className="flex items-center gap-4 mb-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-foreground whitespace-nowrap">
+          <span className="text-primary font-mono text-xl">{order}.</span>{" "}
+          {title}
+        </h2>
 
-      <div className="h-px bg-border flex-1" />
-    </div>
+        <div className="h-px bg-border flex-1" />
+      </div>
+    </Reveal>
   );
 }

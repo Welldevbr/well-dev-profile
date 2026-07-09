@@ -1,5 +1,6 @@
 import { ContainerWrapper } from "../ContainerWrapper";
 import { HeadingSection } from "../HeadingSection";
+import { Reveal } from "../Reveal";
 
 import { ExperienceCard } from "./components/ExperienceCard";
 import { experiences } from "./experiences";
@@ -10,10 +11,15 @@ export function Experience() {
       <HeadingSection order="02" title="Experiência" />
 
       <ul className="space-y-6">
-        {experiences.map((experience) => (
-          <li key={`${experience.company}-${experience.period}`}>
-            <ExperienceCard experience={experience} />
-          </li>
+        {experiences.map((experience, index) => (
+          <Reveal
+            key={`${experience.company}-${experience.period}`}
+            delay={parseFloat(`0.${index + 1}`)}
+          >
+            <li key={`${experience.company}-${experience.period}`}>
+              <ExperienceCard experience={experience} />
+            </li>
+          </Reveal>
         ))}
       </ul>
     </ContainerWrapper>

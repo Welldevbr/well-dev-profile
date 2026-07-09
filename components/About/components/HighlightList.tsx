@@ -1,5 +1,6 @@
-import { Code2, Palette, Zap } from "lucide-react";
+import { Reveal } from "@/components/Reveal";
 import { SimpleCard } from "@/components/SimpleCard";
+import { Code2, Palette, Zap } from "lucide-react";
 
 const highlights = [
   {
@@ -25,8 +26,10 @@ const highlights = [
 export function HighlightList() {
   return (
     <div className="grid md:grid-cols-3 gap-6">
-      {highlights.map((item) => (
-        <SimpleCard key={item.title} item={item} />
+      {highlights.map((item, index) => (
+        <Reveal key={item.title} delay={parseFloat(`0.${index + 2}`)}>
+          <SimpleCard item={item} />
+        </Reveal>
       ))}
     </div>
   );

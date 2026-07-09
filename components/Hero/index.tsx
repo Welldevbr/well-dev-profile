@@ -1,7 +1,8 @@
 import { ArrowDown } from "lucide-react";
 
-import { HeroBackground } from "./components/HeroBackground";
+import { Reveal } from "../Reveal";
 import { CTAButtons } from "./components/CtaButtons";
+import { HeroBackground } from "./components/HeroBackground";
 import { SocialLinks } from "./components/SocialLinks";
 import { Typewriter } from "./components/Typewriter";
 
@@ -20,20 +21,28 @@ export function Hero() {
 
       <div className="container relative z-10 mx-auto px-6">
         <div className="mx-auto max-w-2xl">
-          <p className="text-primary font-mono mb-4">
-            Olá, eu sou <Typewriter />
-          </p>
+          <Reveal delay={0.1}>
+            <p className="text-primary font-mono mb-4">
+              Olá, eu sou <Typewriter />
+            </p>
+          </Reveal>
 
-          <h1 className="text-4xl md:text-7xl font-bold tracking-tight">
-            Desenvolvedor Front-end React
-          </h1>
+          <Reveal delay={0.2}>
+            <h1 className="text-4xl md:text-7xl font-bold tracking-tight">
+              Desenvolvedor Front-end React
+            </h1>
+          </Reveal>
 
-          <h2 className="mt-4 mb-10 text-2xl md:text-4xl text-muted-foreground font-semibold">
-            Construo experiências digitais.
-          </h2>
+          <Reveal delay={0.3}>
+            <h2 className="mt-4 mb-10 text-2xl md:text-4xl text-muted-foreground font-semibold">
+              Construo experiências digitais.
+            </h2>
+          </Reveal>
 
-          <CTAButtons />
-          <SocialLinks />
+          <Reveal delay={0.4}>
+            <CTAButtons />
+            <SocialLinks />
+          </Reveal>
         </div>
 
         <div
