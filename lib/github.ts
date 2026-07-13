@@ -20,14 +20,8 @@ export async function getRepositories(): Promise<GetRepositoriesResponse> {
     }
 
     const response = await fetch(
-      `https://api.github.com/users/${username}/repos?per_page=100&sort=updated`,
+      `https://api.github.com/users/${username}/repos`,
       {
-        headers: {
-          Accept: "application/vnd.github+json",
-          ...(token && {
-            Authorization: `Bearer ${token}`,
-          }),
-        },
         next: {
           revalidate: 60 * 60,
         },

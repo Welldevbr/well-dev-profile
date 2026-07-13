@@ -34,7 +34,7 @@ export async function Projects() {
       <HeadingSection order="03" title="Projetos" />
 
       <div className="space-y-16 mb-24">
-        {repoToDisplay?.length ? (
+        {repoToDisplay?.length > 0 ? (
           repoToDisplay?.map((project, index) => (
             <Reveal
               key={index}
