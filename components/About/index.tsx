@@ -43,10 +43,9 @@ export function About() {
           <Reveal delay={0.1}>
             <p className="leading-relaxed text-muted-foreground">
               Sou desenvolvedor{" "}
-              <TextHighlight active={isActive}>Front-End</TextHighlight> com
-              mais de{" "}
+              <TextHighlight active={isActive}>Front-End</TextHighlight> com{" "}
               <TextHighlight active={isActive}>
-                3 anos de experiência
+                +4 anos de experiência
               </TextHighlight>
               , especializado no ecossistema JavaScript e na construção de
               interfaces modernas, escaláveis e de alta performance utilizando{" "}
