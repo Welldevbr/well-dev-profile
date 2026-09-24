@@ -7,6 +7,7 @@ const technologies = [
     stacks: [
       "React",
       "Next.js",
+      "TanStack Start",
       "TypeScript",
       "JavaScript (ES6+)",
       "TailwindCSS",
@@ -21,6 +22,9 @@ const technologies = [
     stacks: [
       "Node.js",
       "Express.js",
+      "Java",
+      "Maven",
+      "Spring-boot",
       "JWT",
       "REST APIs",
       "Prisma ORM",
@@ -30,7 +34,19 @@ const technologies = [
   },
   {
     name: "Qualidade & Workflow",
-    stacks: ["Git & GitHub", "Jest", "Vitest", "Figma", "Scrum", "Kanban"],
+    stacks: [
+      "Git & GitHub",
+      "Jest",
+      "Vitest",
+      "Figma",
+      "Jira",
+      "Lovable",
+      "IA Generativa",
+      "IA Agents",
+      "Claude Code",
+      "Scrum",
+      "Kanban",
+    ],
   },
 ];
 
