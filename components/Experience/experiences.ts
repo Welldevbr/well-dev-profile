@@ -9,6 +9,26 @@ interface ExperienceItem {
 
 export const experiences: Array<ExperienceItem> = [
   {
+    period: "2026 - Atual",
+    role: "Desenvolvedor Sênior",
+    company: "Grupo EMMA",
+    companyUrl: "https://grupoemma.com.br/",
+    description:
+      "Atuação no desenvolvimento de aplicações e soluções corporativas utilizando React.js, Next.js, TypeScript, Node.js e Express.js. Desenvolvimento e integração de APIs e serviços com PostgreSQL e Supabase, com foco em segurança, escalabilidade, manutenção e organização de dados. Participação na implementação de soluções com Inteligência Artificial Generativa e agentes de IA para automação de processos e produtos, além da estruturação do setor de desenvolvimento, definição de padrões técnicos e decisões de arquitetura.",
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Supabase",
+      "IA Generativa",
+      "Agentes de IA",
+      "REST API",
+    ],
+  },
+  {
     period: "Jan/2026 - Jun/2026",
     role: "Desenvolvedor Front-end SFCC (Salesforce Commerce Cloud)",
     company: "Backlgrs",
